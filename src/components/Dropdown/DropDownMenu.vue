@@ -3,10 +3,11 @@
         <!-- div for dropdown svg -->
         <div class="relative">
             <div :data-cy="dataCy" @click="showdropDown = !showdropDown">
-                <div v-if="showActionIcon" class="w-full h-full p-2  flex items-center justify-center rounded-full"
-                    :class="store.theme === 'light' ? 'hover:bg-[rgba(0,0,0,0.05)]' : 'hover:bg-[rgba(206,205,205,0.5)]'">
-                    <component :is="actionIcon" />
-                </div>
+                <IconButton>
+                <div v-if="showActionIcon" class="p-1 flex items-center justify-center rounded-full">
+                        <component :is="actionIcon" />
+                    </div>
+                </IconButton>
             </div>
             <!-- div for the dropdown -->
             <div class="absolute z-50 min-w-[10rem] mt-3" :class="absoluteClass" v-if="showdropDown">
@@ -21,7 +22,7 @@
                   px-4
                   py-3
                   cursor-pointer
-                " :class="store.theme === 'light' ? 'hover:border-[#000000] hover:border-l-[3px]' : 'hover:border-[#ffffff]'"
+                " :class="store.theme === 'light' ? 'hover:border-[#000000] hover:border-l-[3px]' : 'hover:border-[#ffffff] hover:border-l-[3px]'"
                             @mouseover="activeOption = option.id" @mouseleave="activeOption = 0" @click="
                                 [
                                     $emit('selectOption', option.name),
@@ -52,6 +53,7 @@
 <script setup lang="ts">
 import { type Component, type PropType, ref, watch } from "vue";
 import { useStore } from "@/stores/store";
+import IconButton from "../buttons/IconButton.vue";
 const store = useStore()
 
 type OptionsType = {

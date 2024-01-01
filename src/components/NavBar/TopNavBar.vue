@@ -8,7 +8,7 @@
                 </div>
                 <div class="flex cursor-pointer items-center gap-1" @click="$router.push('/')">
                     <YouTubeIcon />
-                    <p class="text-xl font-youtube">YouTube</p>
+                    <p class="text-xl font-youtube sm:hidden lg:block">YouTube</p>
                     <!-- <span class="-mt-8 font-thin">{{ store.videoList.regionCode }}</span> -->
                 </div>
             </div>
