@@ -1,12 +1,11 @@
 <template>
-  <VideoTypes :types="videoTypes" />
+  <VideoTypes :types="videoTypes"/>
   <div class="scroll flex gap-4 mx-3 w-full h-[100vh]  my-20">
     <div class="h-[100vh] w-[70%] scroll hover:overflow-y-scroll overflow-y-hidden">
       <div class="mb-28">
         <video class="w-full rounded-tl-xl rounded-tr-xl" autoplay controls>
-          <source :src="currentVideo?.preview" type="video/mp4">
-        </video>
-        <p class="mt-5">{{ currentVideo?.title }}</p>
+            <source :src="currentVideo?.preview" type="video/mp4">
+        </video>        <p class="mt-5">{{ currentVideo?.title }}</p>
         <div class="flex mt-5 items-center gap-5">
           <img :src="currentVideo?.logo" alt="">
           <p class="">{{ currentVideo?.channel }}</p>
@@ -43,7 +42,7 @@ const { id } = useRoute().params
 const showAll = ref(false)
 
 const currentVideo = computed(() => {
-  return data?.find(item => (item.id) === Number((id as string)))
+  return data?.find(item => (item.id) === Number(decodeUrlPath(id as string)))
 })
 
 const restOfData = computed(() => {
@@ -52,7 +51,7 @@ const restOfData = computed(() => {
 
 
 const videoTypes = computed(() => {
-  return data.map((item) => item.type)
+    return data.map((item) => item.type)
 })
 
 
