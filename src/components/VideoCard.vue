@@ -64,7 +64,7 @@ const handleSelectOption = (name: string) => {
 }
 
 const navigate = (id: number) => {
-    window.location.href = `/watch/${(id.toString())}`
+    window.location.href = `/watch/${encodeUrlPath(id.toString())}`
 }
 </script>
 
