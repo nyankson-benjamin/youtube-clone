@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[15%] h-[100vh] scroll hover:overflow-y-auto top-0 bottom-0 right-0">
+    <div class="w-[15%] h-[100vh] mr-3 scroll hover:overflow-y-auto top-0 bottom-0 right-0">
         <TopItems />
         <MiddleItems />
         <TopItems />

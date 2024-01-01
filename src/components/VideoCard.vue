@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-80 h-80 border rounded-xl cursor-pointer [&>div]:hover:visible [&>video]:hover:block [&>img]:hover:hidden">
+        class="w-80 sm:w-full sm:h-[330px] h-80 border rounded-xl cursor-pointer [&>div]:hover:visible [&>video]:hover:block [&>img]:hover:hidden">
         <img :src="video?.cover" alt="" class="w-full rounded-tl-xl rounded-tr-xl block"
             @click="navigate(video?.id as number)">
         <video class="hidden w-full rounded-tl-xl rounded-tr-xl" autoplay muted @click="navigate(video?.id as number)">
@@ -17,7 +17,7 @@
             { id: 1, name: 'live', label: 'Go live', icon: ActionIcon, fill: '#696F8C', route: '#' }]"
                 :actionIcon="ActionIcon" />
         </div>
-        <div class="ml-11 text-gray-500" @click="navigate(video?.id as number)">
+        <div class="ml-11 text-gray-500 sm:flex md:block items-center" @click="navigate(video?.id as number)">
             <span>{{ video?.channel }}</span>
             <br>
             <span>{{ video?.views }} views . 2 days ago</span>

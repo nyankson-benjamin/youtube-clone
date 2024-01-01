@@ -30,9 +30,10 @@ watchEffect(() => {
   <div class="">
     <TopNavBar />
     <div class="flex overflow-y-hidden">
-
       <SideBarComponent v-if="store.showSideBar" />
-      <TopItems v-else />
+      <div v-else class="sm:hidden md:hidden lg:block xl:block">
+        <TopItems />
+      </div>
       <div class="w-full">
         <RouterView />
       </div>
