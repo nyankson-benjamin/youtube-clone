@@ -3,7 +3,7 @@
         class="w-80 h-80 border rounded-xl cursor-pointer [&>div]:hover:visible [&>video]:hover:block [&>img]:hover:hidden">
         <img :src="video?.cover" alt="" class="w-full rounded-tl-xl rounded-tr-xl block"
             @click="navigate(video?.id as number)">
-        <video class="hidden w-full rounded-tl-xl rounded-tr-xl" autoplay muted  @click="navigate(video?.id as number)">
+        <video class="hidden w-full rounded-tl-xl rounded-tr-xl" autoplay muted @click="navigate(video?.id as number)">
             <source :src="video?.preview" type="video/mp4">
         </video>
         <div class="flex items-center my-2 mr-2 ml-1 gap-2">
@@ -37,6 +37,7 @@ import ActionIcon from "@/assets/Icons/ActionIcon.vue"
 import DropDownMenu from "./Dropdown/DropDownMenu.vue";
 import RadarIcon from "@/assets/Icons/RadarIcon.vue";
 import { encodeUrlPath } from "@/helpers/utils";
+import { useRoute, useRouter } from "vue-router";
 
 defineProps({
     video: Object as PropType<{
@@ -62,9 +63,9 @@ const handleSelectOption = (name: string) => {
             break;
     }
 }
-
+const router = useRouter()
 const navigate = (id: number) => {
-    window.location.href = `/watch/${encodeUrlPath(id.toString())}`
+    router.push(`/watch/${encodeUrlPath(id.toString())}`)
 }
 </script>
 
