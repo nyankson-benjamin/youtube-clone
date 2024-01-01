@@ -30,7 +30,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { data } from '@/constants/videoData.ts';
+import { data } from '@/constants/videoData';
 import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import VideoCard from '@/components/VideoCard.vue';
