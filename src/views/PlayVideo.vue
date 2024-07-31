@@ -41,7 +41,7 @@ const { id } = useRoute().params
 const showAll = ref(false)
 
 const currentVideo = computed(() => {
-  return data?.find(item => (item.id) === Number((id)))
+  return data?.find(item => Number(item.id) === Number((id)))
 })
 
 const restOfData = computed(() => {
