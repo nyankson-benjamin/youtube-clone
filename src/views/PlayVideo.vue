@@ -34,7 +34,6 @@ import { data } from '@/constants/videoData';
 import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import VideoCard from '@/components/VideoCard.vue';
-import { decodeUrlPath } from '@/helpers/utils';
 import VideoTypes from "@/components/VideoTypes.vue"
 
 
@@ -42,7 +41,7 @@ const { id } = useRoute().params
 const showAll = ref(false)
 
 const currentVideo = computed(() => {
-  return data?.find(item => (item.id) === Number(decodeUrlPath(id as string)))
+  return data?.find(item => (item.id) === Number((id)))
 })
 
 const restOfData = computed(() => {

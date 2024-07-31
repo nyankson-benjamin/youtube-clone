@@ -36,8 +36,7 @@ import { defineProps, type PropType } from "vue"
 import ActionIcon from "@/assets/Icons/ActionIcon.vue"
 import DropDownMenu from "./Dropdown/DropDownMenu.vue";
 import RadarIcon from "@/assets/Icons/RadarIcon.vue";
-import { encodeUrlPath } from "@/helpers/utils";
-import { useRoute, useRouter } from "vue-router";
+import { useRouter } from "vue-router";
 
 defineProps({
     video: Object as PropType<{
@@ -65,8 +64,7 @@ const handleSelectOption = (name: string) => {
 }
 const router = useRouter()
 const navigate = (id: number) => {
-    window.location.assign(`/watch/${encodeUrlPath(id.toString())}`)
+    window.location.assign(`/watch/${(id.toString())}`)
 }
 </script>
 
-<style scoped></style>

@@ -50,4 +50,3 @@ watch(activeTab, (val) => {
     </div>
 </template>
 
-<style scoped></style>
