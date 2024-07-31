@@ -64,7 +64,7 @@ const handleSelectOption = (name: string) => {
 }
 const router = useRouter()
 const navigate = (id: number) => {
-    window.location.assign(`/watch/${(id.toString())}`)
+    window.location.assign(`/watch/${(id)}`)
 }
 </script>
 
