@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, type Component, type PropType } from "vue"
+import { type Component, type PropType } from "vue"
 import DownloadIcon from "@/assets/Icons/SideBar/DownloadIcon.vue";
 import { useStore } from "@/stores/store";
 import CoverImage from "@/assets/Images/CoverImage.svg"

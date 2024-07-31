@@ -15,7 +15,6 @@
 </template>
 <script setup lang="ts">
 import { toggleSvgColor } from '@/helpers/utils';
-import { defineProps } from 'vue';
 const props = defineProps({
     toggleColor: {
         type: Boolean,

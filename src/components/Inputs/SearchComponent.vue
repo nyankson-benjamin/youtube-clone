@@ -19,7 +19,6 @@
 import SearchIcon from "@/assets/Icons/SearchIcon.vue"
 import MicroPhone from "@/assets/Icons/MicroPhone.vue"
 import { useStore } from "@/stores/store";
-import { defineProps } from "vue"
 
 const store = (useStore())
 
