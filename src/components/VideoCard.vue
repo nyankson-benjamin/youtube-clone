@@ -32,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, type PropType } from "vue"
+import {  type PropType } from "vue"
 import ActionIcon from "@/assets/Icons/ActionIcon.vue"
 import DropDownMenu from "./Dropdown/DropDownMenu.vue";
 import RadarIcon from "@/assets/Icons/RadarIcon.vue";
@@ -64,7 +64,7 @@ const handleSelectOption = (name: string) => {
 }
 const router = useRouter()
 const navigate = (id: number) => {
-    window.location.assign(`/watch/${(id)}`)
+    router.push(`/watch/${(id)}`)
 }
 </script>
 
